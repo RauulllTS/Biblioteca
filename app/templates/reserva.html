@@ -1,0 +1,19 @@
+<h2 class="mb-4">Tabela de Empréstimos</h2>
+<thead>
+<tr>
+    <th>Livro</th>
+    <th>Leitor</th>
+    <th>Data Empréstimo</th>
+    <th>Data Devolução</th>
+</tr>
+</thead>
+<tbody>
+{% for reserva in reservas %}
+<tr>
+    <td>{{ reserva.livro }}</td>
+    <td>{{ reserva.leitor }}</td>
+    <td>{{ reserva.data_emprestimo }}</td>
+    <td>{{ reserva.data_devolucao }}</td>
+</tr>
+{% endfor %}
+</tbody>

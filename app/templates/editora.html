@@ -1,0 +1,13 @@
+<h2 class="mb-4">Tabela de Editoras</h2>
+<thead>
+<tr>
+    <th>Nome</th>
+</tr>
+</thead>
+<tbody>
+{% for editora in editoras %}
+<tr>
+    <td>{{ editora.nome }}</td>
+</tr>
+{% endfor %}
+</tbody>

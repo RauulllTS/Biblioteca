@@ -1,0 +1,13 @@
+<h2 class="mb-4">Tabela de Gêneros</h2>
+<thead>
+<tr>
+    <th>Nome</th>
+</tr>
+</thead>
+<tbody>
+{% for genero in generos %}
+<tr>
+    <td>{{ genero.nome }}</td>
+</tr>
+{% endfor %}
+</tbody>

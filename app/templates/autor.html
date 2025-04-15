@@ -1,0 +1,13 @@
+<h2 class="mb-4">Tabela de Autores</h2>
+<thead>
+<tr>
+    <th>Nome</th>
+</tr>
+</thead>
+<tbody>
+{% for autor in autores %}
+<tr>
+    <td>{{ autor.nome }}</td>
+</tr>
+{% endfor %}
+</tbody>

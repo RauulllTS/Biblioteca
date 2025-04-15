@@ -1,0 +1,17 @@
+<h2 class="mb-4">Tabela de Leitores</h2>
+<thead>
+<tr>
+    <th>Nome</th>
+    <th>CPF</th>
+    <th>Cidade</th>
+</tr>
+</thead>
+<tbody>
+{% for leitor in leitores %}
+<tr>
+    <td>{{ leitor.nome }}</td>
+    <td>{{ leitor.cpf }}</td>
+    <td>{{ leitor.cidade }}</td>
+</tr>
+{% endfor %}
+</tbody>
