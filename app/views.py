@@ -41,3 +41,10 @@ class GenerosView(View):
     def get(self, request, *args, **kwargs):
         generos = Genero.objects.all()
         return render(request, 'genero.html', {'generos': generos})
+    
+class DeleteLivroView(View):
+    def get(self, request, id, *args, **kwargs):
+     livro = Livro.objects.get(id=id)
+     livro.delete()
+     messages.success(request, 'livro excluido com sucesso')
+     return redirect('livros')
