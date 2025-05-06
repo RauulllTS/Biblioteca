@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
 from app.views import *
+from app.views import EditarLivroView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,5 +32,6 @@ urlpatterns = [
     path('leitor/', LeitoresView.as_view(), name='leitor'),
     path('genero/', GenerosView.as_view(), name='genero'),
     path('admin/', admin.site.urls),
-    path('delete/<int:id>/', DeleteLivroView.as_view(), name = 'delete')
+    path('delete/<int:id>/', DeleteLivroView.as_view(), name = 'delete'),
+    path('editar/<int:id>/', EditarLivroView.as_view(), name='editar')
 ]
